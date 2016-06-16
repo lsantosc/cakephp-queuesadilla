@@ -65,6 +65,9 @@ class QueuesadillaShell extends Shell
         if (empty($loggerName)) {
             $loggerName = $this->params['logger'];
         }
+        if ($this->param('quiet')) {
+            $loggerName = 'debug';
+        }
         return $loggerName;
     }
 
